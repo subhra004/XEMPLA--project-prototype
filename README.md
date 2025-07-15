@@ -1,61 +1,62 @@
-# XEMPLA--project-prototype
-Xempla project prototype- An end-to-end deep learning pipeline for predictive maintenance via vibration signal classification, enabling intelligent monitoring of industrial machinery
+# Xempla Smart Asset Monitoring Prototype
 
-## Smart Asset Monitoring using Deep Learning & Vibration Analysis
-This project presents an end-to-end deep learning pipeline for predictive maintenance via vibration signal classification, enabling intelligent monitoring of industrial machinery. By analyzing vibration patterns, the model can detect and classify machinery health conditions using signal processing and a CNN-based deep learning model.
+A simple end-to-end machine learning prototype for *predictive maintenance, **fault detection, and **energy optimization* for industrial facilities — inspired by Xempla’s Decision Intelligence platform.
+
+---
+
+## Smart Asset Monitoring using Machine Learning
+
+This project shows how ML can help monitor asset health using simple anomaly detection, condition-based maintenance, and energy usage prediction — all on time-series sensor data.
+
+---
 
 ## Features
 
- Fault detection and classification of rotating machinery (bearings).
+- *Fault Detection:*  
+  Isolation Forest detects anomalies in vibration & temperature sensor data.
 
- Signal preprocessing using Fast Fourier Transform (FFT).
+- *Condition-Based Maintenance (CBM):*  
+  A rolling health score is calculated from normalized vibration levels.
 
- 1D Convolutional Neural Network for spectral feature extraction.
+- *Energy Usage Prediction:*  
+  Linear Regression predicts energy usage trends from operating data.
 
- High-accuracy classification of healthy and faulty conditions.
+---
 
- Designed for time-series vibration data from accelerometer sensors.
+## Technologies Used
 
+- Python 3.x
+- Pandas, NumPy
+- Scikit-learn
+- Matplotlib
+- Isolation Forest
+- Linear Regression
 
+---
 
-##  Technologies Used
-Python 3.x
+##  Workflow Overview
 
-NumPy, Pandas
+1️⃣ *Data Preparation*
+- Synthetic time-series data (temperature, vibration, energy).
+- Some data points contain injected anomalies.
 
-Matplotlib, Seaborn
+2️⃣ *Fault Detection*
+- Isolation Forest flags unusual behavior.
 
-Scikit-learn
+3️⃣ *Condition-Based Maintenance*
+- A health score is computed and smoothed to simulate asset degradation.
 
-TensorFlow / Keras
+4️⃣ *Energy Prediction*
+- Simple regression model forecasts energy usage.
 
-Signal Processing: FFT
+---
 
+## ✅ Results
 
-## Workflow Overview
-1. Data Preparation
+- ✅ Anomalies clearly flagged in plots.
+- ✅ Health score trend visible for maintenance planning.
+- ✅ Predicted vs actual energy usage plotted for comparison.
 
-   Vibration signals are collected from different machinery conditions.
-   Data is labeled based on condition (e.g., healthy, outer fault, inner fault).
-   Signals are converted into frequency domain using FFT.
-   
-2. Model Development
-   
-   A 1D CNN is used for classification of FFT-processed signals.
-   Model architecture includes multiple convolutional and dense layers.
-   Trained and validated on labeled dataset.
-
-3. Evaluation
-
-    Accuracy, loss, and classification report are generated.
-    Confusion matrix visualized to assess model performance.
-
-## Results
-✅ Achieved high classification accuracy across different fault types.
-
-🔍 Clear distinction between healthy and faulty signals via FFT visualization.
-
-🧠 CNN model effectively learns features from spectral domain.
-
+---
 
 
